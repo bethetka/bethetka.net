@@ -17,9 +17,10 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@astrojs/compiler-rs": "^0.5.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "oxfmt": "^0.23.0"
+    "oxfmt": "^0.74.0"
   },
   "lint-staged": {
     "**/*.{astro,css,html,js,json,jsonc,md,mjs,ts,yaml,yml}": "oxfmt --write"
