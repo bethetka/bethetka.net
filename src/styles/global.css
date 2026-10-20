@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+}
+
+:root {
+  color-scheme: light dark;
+  --page: #f2e5bc;
+  --card: #fbf1c7;
+  --foreground: #3c3836;
+  --muted: #7c6f64;
+  --accent: #af3a03;
+  --border: #d5c4a1;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--foreground);
+}
+
+.studio-card {
+  position: relative;
+}
+
+@media (min-width: 48rem) {
+  .studio-card::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 54.545%;
+    width: 1px;
+    background: var(--border);
+    content: "";
+  }
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--page);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #1d2021;
+    --card: #282828;
+    --foreground: #ebdbb2;
+    --muted: #a89984;
+    --accent: #fabd2f;
+    --border: #504945;
+  }
+
+  body {
+    background: var(--page);
+    color: var(--foreground);
+  }
+}
